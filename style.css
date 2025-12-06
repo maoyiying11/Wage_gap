@@ -1,0 +1,168 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-x: auto;
+}
+
+
+.title {
+    color: #0d47a1;
+
+    margin: 20px 0 5px 0;
+
+    font-size: 1.8em;
+    font-weight: 600;
+}
+
+
+.control-container {
+    width: 98%;
+    max-width: none;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+.year-prompt {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #1976d2;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+
+.year-btn {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: #e3f2fd;
+    color: #1565c0;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.year-btn:hover {
+    background-color: #bbdefb;
+}
+
+.year-btn.active {
+    background-color: #1976d2;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+svg {
+
+    width: auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-top: 0px;
+}
+
+
+rect.bar {
+    stroke: #333;
+    stroke-width: 1px;
+
+    cursor: pointer;
+}
+
+
+rect.bar.faded {
+    opacity: 0.2 !important;
+}
+
+rect.bar.highlighted {
+    transform: scaleY(1.01);
+    fill-opacity: 0.8;
+    stroke-width: 2px;
+}
+
+
+.legend-rect {
+    transition: fill 0.3s;
+    opacity: 0.7;
+}
+
+.legend-rect:hover {
+    opacity: 1.0;
+}
+
+
+.legend-rect.active {
+    stroke: #333;
+    stroke-width: 2px;
+    opacity: 1.0;
+}
+
+.legend text {
+    font-weight: 600;
+}
+
+
+
+.tooltip-div {
+    position: fixed;
+    background: #212121;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    pointer-events: none;
+    font-size: 14px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    line-height: 1.5;
+    z-index: 1000;
+}
+
+
+#mini-chart {
+    z-index: 1000;
+    background: #ffffff;
+    border: 1px solid #aaa;
+    border-radius: 6px;
+    padding: 10px 5px 5px 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 10px;
+}
+
+#mini-chart svg {
+    box-shadow: none;
+}
+
+.tick line {
+    stroke: #ccc;
+}
+
+
+text {
+    font-size: 12px;
+}
